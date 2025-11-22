@@ -1,0 +1,127 @@
+:root {
+  --bg: #0b0f1a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+  --accent-2: #34d399;
+  --border: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(96,165,250,0.15), transparent),
+              radial-gradient(1200px 800px at 10% 120%, rgba(52,211,153,0.12), transparent),
+              var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+.search {
+  position: sticky;
+  top: 0.75rem;
+  padding: 0.75rem 0;
+  background: linear-gradient(180deg, rgba(11,15,26,0.9), rgba(11,15,26,0.6) 60%, transparent);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.search input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(17,24,39,0.9), rgba(17,24,39,0.7));
+  color: var(--text);
+  outline: none;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03), 0 0 0 0 rgba(96,165,250,0.35);
+}
+
+.search input:focus {
+  border-color: var(--accent);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 4px rgba(96,165,250,0.15);
+}
+
+.results {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.result-item {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(17,24,39,0.9), rgba(17,24,39,0.7));
+  border-radius: 14px;
+  padding: 14px 16px;
+  transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.03);
+}
+
+.result-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(96,165,250,0.35);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.greeting {
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.language {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+mark {
+  background: linear-gradient(180deg, rgba(96,165,250,0.22), rgba(52,211,153,0.16));
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 4px;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  padding: 1rem 0;
+}
+
+.footer {
+  margin-top: 3rem;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.9rem;
+}
